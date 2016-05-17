@@ -1,0 +1,25 @@
+.icon {
+  @include hide-text;
+  display: inline-block;
+  vertical-align: middle;
+  background-image: url(asset/images/icon.png);
+  background-repeat: no-repeat;
+}
+
+.icon-jocker {
+  width: 39px;
+  height: 42px;
+  background-position: 0 0;
+}
+
+.icon-reset {
+  width: 24px;
+  height: 24px;
+  background-position: 0 -62px;
+}
+
+.icon-delete {
+  width: 14px;
+  height: 14px;
+  background-position: 0 -106px;
+}

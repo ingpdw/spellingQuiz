@@ -1,0 +1,7 @@
+.footer {
+  @include rem(padding, 67px 0 50px);
+  font-size: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #cbb8e5;
+}

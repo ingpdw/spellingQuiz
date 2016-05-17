@@ -1,0 +1,35 @@
+.finish {
+	@include rem(padding-bottom, 5rem);
+	word-wrap: break-word;
+	text-align: center;
+
+	&-title {
+		@include rem(padding-top, 33px);
+		@include rem(font-size, 52px);
+		margin: 0;
+		font-weight: bold;
+		color: #fed61b;
+	}
+
+	&-subcopy {
+		@include rem(font-size, 28px);
+		@include rem(padding, 0 1rem);
+		color: #fff;
+	}
+}
+
+@media (min-width: 600px){
+	.finish {
+		@include rem(padding-bottom, 300px);
+	}
+
+	.finish-title {
+		@include rem(font-size, 72px);
+		@include rem(padding-top, 73px);
+	}
+
+	.finish-subcopy {
+		@include rem(font-size, 48px);
+		@include rem(margin-bottom, 100px);
+	}
+}

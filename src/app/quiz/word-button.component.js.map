@@ -1,0 +1,1 @@
+{"version":3,"file":"word-button.component.js","sourceRoot":"","sources":["word-button.component.ts"],"names":[],"mappings":";;;;;;;;;;AAAA,qBAAiC,eAAe,CAAC,CAAA;AAWjD;IAAA;IAGA,CAAC;IAFC;QAAC,YAAK,EAAE;;yDAAA;IACR;QAAC,YAAK,EAAE;;0DAAA;IAXV;QAAC,gBAAS,CAAC;YACT,QAAQ,EAAE,WAAW;YACrB,QAAQ,EAAE,yNAKG;SACd,CAAC;;yBAAA;IAIF,wBAAC;AAAD,CAAC,AAHD,IAGC;AAHY,yBAAiB,oBAG7B,CAAA"}

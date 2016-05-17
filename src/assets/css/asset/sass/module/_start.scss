@@ -1,0 +1,95 @@
+.start-title {
+	@include rem(padding-top, 30px);
+	margin: 0;	
+	text-align: center;
+
+	div {
+		@extend .animated;
+		@extend .bounce; 		
+	}
+
+	span {
+		@include transition(top .1s ease);
+		@include rem(font-size, 36px);
+		position: relative;
+		display: inline-block;
+		top: 0;
+		width: 50px;
+		height: 60px;
+		margin: 5px 2px;
+		line-height: 53px;
+		border-radius: 10px;
+		box-shadow: inset 0 1px #fde7a7, 0 4px #000;		
+		letter-spacing: -0.05em;
+		text-shadow: 0 3px rgba(131,84,23,.75);
+		text-align: center;
+		color: #fff;
+		cursor: pointer;
+
+		&:hover {			
+			top: -8px;
+		}
+	}
+
+	.title-group1 span {
+		@include linear-gradient(#f9c72c, #f18806);
+		border: 1px solid #b7abc8;		
+	}
+
+	.title-group2 span {
+		@include linear-gradient(#f99a2c, #f04405);
+		border: 1px solid #fdd4a7;		
+	}
+}
+
+.start-logo {	
+	@include rem(font-size, 120px);
+	width: 180px;
+	height: 180px;
+	margin: 27px auto;
+	border-radius: 50%;
+	box-shadow: inset 0 0 18px rgba(0,0,0,.46),
+              0 -4px 4px rgba(0,0,0,.23),
+              0 0 54px 9px rgba(184,128,191,.75);
+	font-weight: bold;
+	text-shadow: 0 6px #000;
+	line-height: 170px;
+	letter-spacing: -0.05em;
+	text-align: center;
+	color: #ffe065;
+	background: url(asset/images/logo.png) no-repeat center;
+
+	span {
+		@extend .animated;
+		display: inline-block;		
+	}
+
+	&:hover span {
+		@extend .flip;
+	}
+}
+
+@media (min-width: 600px) {
+	.start-title {
+		@include rem(padding-top, 83px);
+
+		div {
+			@include rem(padding-top, 22px);
+		}
+
+		span {
+			@include rem(font-size, 56px);
+			width: 60px;
+			height: 80px;
+			line-height: 73px;
+		}
+	}
+
+	.start-logo {
+		@include rem(font-size, 170px);
+		width: 250px;
+		height: 250px;
+		margin: 67px auto;
+		line-height: 230px;
+	}
+}

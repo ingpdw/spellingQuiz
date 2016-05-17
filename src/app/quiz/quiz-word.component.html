@@ -1,0 +1,41 @@
+<div class="answer">
+  <ol class="answer-list">
+    <li *ngFor="let answer of answers; let idx=index"
+      [ngClass]="{'auto-filled': itemsAnswers[idx] == 'joker'}">
+      <span *ngIf="!answer"></span>
+      <span *ngIf="answer != '0'">{{answer}}</span>
+      <button class="btn btn-delete" (click)="remove($event, idx)" value="answer">x</button>
+    </li>
+  </ol>
+  <button class="btn btn-reset" title="reset" (click)="reset()">X</button>
+</div>
+<div class="words">
+  <ul class="words-list">
+    <li *ngFor="let item of items; let idx=index" #anwserBox>
+        <button *ngIf="itemsClicked[idx] == '0'" class="btn btn-word" (click)="clicked($event, item)" [value]="idx">{{item}}</button>
+    </li>
+  </ul>
+</div>
+<!-- <div class="answer">
+  <ol class="answer-list"
+    *ngFor="let answer of answers; let idx=index">
+    <li *ngIf="!answer"></li>
+    <li *ngIf="answer" [ngClass]="{
+      'wrong-filled': answer.type === 'wrong'
+    }">
+      <span>
+        {{answer.spell}}
+        <i class="btn btn-delete" (click)="remove($event, idx)" *ngIf="answer.type === 'wrong'">Delete</i>
+      </span>
+    </li>
+  </ol>
+  <button class="btn btn-reset" title="reset"
+    *ngIf="answers.length === items.length"
+    (click)="reset()">X</button>
+</div>
+
+<ul class="words-list">
+  <li *ngFor="let spell of items; let idx=index">
+      <button class="btn btn-word" (click)="clicked($event, spell)" [value]="idx">{{spell}}</button>
+  </li>
+</ul> -->

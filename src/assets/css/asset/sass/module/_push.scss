@@ -1,0 +1,77 @@
+.push {
+  @extend .animated;
+  @include transform(translate3d(0, -100%, 0));
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2d0b3b;
+  opacity: 0;
+  // &-set {
+  //   @include rem(font-size, 60px);
+  //   position: absolute;
+  //   top: 163px;
+  //   left: 50%;
+  //   width: 410px;
+  //   height: 410px;
+  //   margin-left: -205px;
+  //   border: 10px solid #642e7a;
+  //   border-radius: 50%;
+  //   line-height: 380px;
+  //   text-align: center;
+  //   vertical-align: middle;
+  //   color: #ffab19;
+  // }
+
+  &-wrap {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 80%;
+    margin: -40% 0 0 -40%;
+    padding-bottom: 80%;
+  }
+
+  &-circle {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border: 10px solid #642e7a;
+    border-radius: 50%;
+    color: #ffab19;
+  }
+
+  .rw-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+
+  .rw-cell {
+    @include rem(font-size, 40px);    
+    display: table-cell;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    vertical-align: middle;
+    word-break: break-word;
+  }  
+}
+
+@media (min-width: 600px){
+  .push-wrap {
+    width: 410px;
+    height: 410px;
+    margin: -205px 0 0 -205px;
+    padding-bottom: 0;
+  }  
+
+  .push .rw-cell {
+    @include rem(font-size, 60px);
+  }
+}

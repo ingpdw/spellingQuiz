@@ -1,0 +1,162 @@
+.quiz {
+  @include rem(padding-top, 70px);
+}
+
+.step {
+  @include rem(font-size, 30px);
+  @include rem(padding, 6px 0 7px);
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  width: 220px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: #ffe32a;
+  background-color: #39204e;
+
+  &-bar,
+  &-total {
+    font-weight: normal;
+  }  
+}
+
+.thumb { 
+  overflow: hidden;
+  width: 360px;
+  max-width: 80%;
+  margin: 0 auto;
+  border-radius: 50%;
+  box-shadow: inset 0 0 18px rgba(0,0,0,.46),
+              0 -4px 4px rgba(0,0,0,.23),
+              0 0 54px 9px rgba(184,128,191,.75);
+  vertical-align: middle;
+  background-color: #fff;
+
+  &-wrap {
+    position: relative;
+    padding-bottom: 100%;
+  }
+
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    margin-top: -50%;
+    margin-left: -50%;
+  }
+}
+
+.answer {
+  @include rem(margin-top, 37px);
+  position: relative;
+  text-align: center;
+}
+
+.answer-list,
+.words-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;  
+  text-align: center;
+
+  li {
+    @include rem(margin, 3px);
+    @include rem(padding-bottom, 2px);
+    @include radial-gradient(ellipse at center, #46295c 0%,#3d2351 94%,#371f4b 100%);
+    display: inline-block;
+    vertical-align: middle;
+    border-radius: 7px;
+    border: 2px solid #2c183d;
+    box-shadow: 0 2px 0 rgba(150,123,186,.75);
+  }
+}
+
+.answer-list {
+  display: inline-block;
+
+  li {
+    @include rem(font-size, 16px);
+    position: relative;
+    width: 40px;
+    height: 40px;
+    font-weight: bold;
+    line-height: 28px;
+    text-transform: uppercase;
+
+    span {
+      @include radial-gradient(ellipse at center,  #68bc1d 0%,#56ae15 100%);
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      border-top: 2px solid #bade9f;
+      border-radius: 7px;
+      vertical-align: top;
+      color: #fff;      
+    }
+
+    .btn-delete {
+      display: none;
+    }
+  }
+
+  .last .btn-delete {
+    z-index: 2;
+    position: absolute;
+    display: block;
+    top: -18px;
+    right: -18px;
+  }
+
+  .auto-filled {
+    span {
+      @include radial-gradient(ellipse at center,  #13bbde 0%,#0eafd8 100%);      
+      border-top: 2px solid #9cdeef;
+    }
+
+    .btn-delete {dsiplay: none; }
+  } 
+    
+
+  .wrong-filled span {
+    @include radial-gradient(ellipse at center,  #dd1a1a 0%,#d51414 100%);
+    border-top: 2px solid #ee9e9e;
+  }
+}
+
+.words {
+  @include rem(margin-top, 26px);
+}
+
+.words-list li {
+  width: 54px;
+  height: 56px;
+}
+
+@media (min-width: 600px) {
+  .answer .btn-reset {
+    @include rem(margin, 6px 0 0 25px);
+    position: absolute;
+    width: 60px;
+    height: 60px;
+  }
+
+  .answer-list li {
+    @include rem(font-size, 36px);
+    width: 64px;
+    height: 66px;
+    line-height: 56px;
+  }
+
+  .words-list li {
+    width: 84px;
+    height: 86px;
+
+    .btn-word {
+      @include rem(font-size, 56px);
+    }
+  }
+}
